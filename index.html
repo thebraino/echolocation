@@ -37,6 +37,39 @@ var rTurn = [0, 35, 63, 90];
 var smallbase = 40;
 var largebase = 80;
 
+var tiesilencer = {
+	faction: "empire",
+	id: "tiesilencer",
+	base: smallbase,
+	protrusions: 1,
+	width: 40,
+	height: 49,
+	actions: ["roll", "boost"],
+	slots: ["elite", "system"],
+	decloak: [],
+	dial: [
+		["straight", "green", 2],
+		["straight", "green", 3],
+		["straight", "green", 4],
+		["straight", "green", 5],
+		["bank", "green", 2, -1],
+		["bank", "green", 3, -1],
+		["bank", "green", 2, 1],
+		["bank", "green", 3, 1],
+		["turn", "green", 2, -1],
+		["turn", "green", 2, 1],
+		["turn", "white", 1, -1],
+		["turn", "white", 1, -1],
+		["turn", "white", 3, 1],
+		["turn", "white", 3, 1],
+		["koiogran", "red", 4],
+		["tallon", "red", 3, -1],
+		["tallon", "red", 3, 1],		
+	]
+};
+tiesilencer.img = new Image();
+tiesilencer.img.src = "images/tieadvanced.png";	
+
 var tiephantom = {
 	faction: "empire",
 	id: "tiephantom",
@@ -94,7 +127,7 @@ var echo = {
 		["bankroll", "blue", 2, 1, -1, 1]
 	]
 };
-
+	
 var tieadvanced = {
 	faction: "empire",
 	id: "tieadvanced",
@@ -3667,6 +3700,7 @@ function animateTurn (flightplan, phase) {
 <td id="select_tiefofighter" class="option select empire model"><img src="images/tiefofighter.png" title="TIE/fo Fighter" onClick="select(tiefofighter);" style="position: relative; left: 0px; bottom: 5px;"></td>
 <td id="select_tiesffighter" class="option select empire model"><img src="images/tiesffighter.png" title="TIE/sf fighter" onClick="select(tiesffighter);" style="position: relative; left: 0px; bottom: 5px;"></td>
 <td id="select_tiestriker" class="option select empire model"><img src="images/tiestriker.png" title="TIE Striker" onClick="select(tiestriker);" style="position: relative; left: 0px; bottom: -1px;"></td>
+<td id="select_tiesilencer" class="option select empire model"><img src="images/tieadvanced.png" title="TIE Advanced" onClick="select(tiesilencer);" style="position: relative; left: 0px; bottom: -2px;"></td>
 <td id="select_vcx100" class="option select alliance model"><img src="images/vcx100-f.png" title="VCX-100" onClick="select(vcx100);" style="position: relative; left: 0px; bottom: 5px;"><img src="images/vcx100-r.png" title="VCX-100" onClick="select(vcx100);" style="position: absolute; left: 0px; bottom: -42px;"></td>
 <td id="select_yt1300" class="option select alliance model"><img src="images/yt1300.png" title="YT-1300" onClick="select(yt1300);" style="position: relative; left: 0px; bottom: 0px;"></td>
 <td id="select_yt2400" class="option select alliance model"><img src="images/yt2400.png" title="YT-2400" onClick="select(yt2400);" style="position: relative; left: 0px; bottom: 5px;"></td>
